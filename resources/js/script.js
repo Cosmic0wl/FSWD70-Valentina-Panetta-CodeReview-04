@@ -51,7 +51,7 @@ $(document).ready(function() {
             var myImage = $('<img src=' + obj[i].img + '>');
             var imgDiv = $(".image");
             $(imgDiv[i]).html(myImage);
-            var myText = $('<p>' + obj[i].title + '</p>' + '<p>' + obj[i].description + '</p>');
+            var myText = $('<p class="font-weight-bold">' + obj[i].title + '</p>' + '<p>' + obj[i].description + '</p>');
             var textDiv = $(".text");
             $(textDiv[i]).html(myText);
             var myLikes = $('<span class="text-success button">Like <i class="fa fa-thumbs-o-up"></i></span>' +
@@ -67,6 +67,8 @@ $(document).ready(function() {
                 incrementLikes(i);
             });
         }
+
+        // ADDITIONAL STYLING
         $("p").addClass("text-light");
         $(".round").css({"display":"flex",
             "align-items":"center",
@@ -76,7 +78,5 @@ $(document).ready(function() {
         $(".round").addClass("ml-3").addClass("rounded-circle").addClass("bg-success");
         $("img").addClass("img-fluid");
     }
-
-    // ADDITIONAL STYILING
 
 });
