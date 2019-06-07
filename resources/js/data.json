@@ -1,0 +1,38 @@
+var movies = [
+{
+	"img": "resources/img/meangirls.jpg",
+	"title": "Mean Girls",
+	"description": "Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.",
+	"likes": 0
+},
+{
+	"img": "resources/img/donniedarko.jpg",
+	"title": "Donnie Darko",
+	"description": "A troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes, after he narrowly escapes a bizarre accident.",
+	"likes": 0
+},
+{
+	"img": "resources/img/hereditary.jpg",
+	"title": "Hereditary",
+	"description": "After the family matriarch passes away, a grieving family is haunted by tragic and disturbing occurrences, and begin to unravel dark secrets.",
+	"likes": 0
+},
+{
+	"img": "resources/img/thevvitch.jpg",
+	"title": "The Witch",
+	"description": "A family in 1630s New England is torn apart by the forces of witchcraft, black magic, and possession.",
+	"likes": 0
+},
+{
+	"img": "resources/img/blairwitch.jpg",
+	"title": "The Blair Witch Project",
+	"description": "Three film students vanish after traveling into a Maryland forest to film a documentary on the local Blair Witch legend, leaving only their footage behind.",
+	"likes": 0
+},
+{
+	"img": "resources/img/ladybird.jpg",
+	"title": "Lady Bird",
+	"description": "In 2002, an artistically inclined seventeen-year-old girl comes of age in Sacramento, California.",
+	"likes": 0
+},
+];
