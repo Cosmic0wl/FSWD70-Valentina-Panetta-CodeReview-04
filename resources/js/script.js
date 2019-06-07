@@ -3,46 +3,6 @@ $(document).ready(function() {
     //JSON GENERATOR
     setContent();
 
-    // INCREMENT LIKES FUNCTION
-
-    function incrementLikes(i) {
-        obj[i].likes++;
-        var plusLikes = $(".plusLikes");
-        $(plusLikes[i]).html(obj[i].likes);
-    }
-
-    // COMPARE FUNCTIONS 
-
-    function compareLikes(movie1, movie2) {
-        return movie2.likes - movie1.likes;
-    }
-
-    function compareTitles(movie1, movie2) {
-        return movie1.title.localeCompare(movie2.title);
-    }
-
-    // SORT FUNCTIONS
-
-    function sortObjByLikes() {
-        return obj.sort(compareLikes);
-    }
-
-    function sortObjByAlphabet() {
-        return obj.sort(compareTitles);
-    }
-
-    var sortingL = $(".sort");
-    $(sortingL).click(function() {
-        sortObjByLikes();
-        setContent();
-    });
-
-    var sortingA = $(".alphabet");
-    $(sortingA).click(function() {
-        sortObjByAlphabet();
-        setContent();
-    });
-
     // SET CONTENT FUNCTION 
 
     function setContent() {
@@ -70,13 +30,55 @@ $(document).ready(function() {
 
         // ADDITIONAL STYLING
         $("p").addClass("text-light");
-        $(".round").css({"display":"flex",
-            "align-items":"center",
-            "justify-content":"center",
-            "width":"40px",
-            "height":"40px"});        
+        $(".round").css({
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "center",
+            "width": "40px",
+            "height": "40px"
+        });
         $(".round").addClass("ml-3").addClass("rounded-circle").addClass("bg-success");
         $("img").addClass("img-fluid");
     }
+
+    // INCREMENT LIKES FUNCTION
+
+    function incrementLikes(i) {
+        obj[i].likes++;
+        var plusLikes = $(".plusLikes");
+        $(plusLikes[i]).html(obj[i].likes);
+    }
+
+    // COMPARE FUNCTIONS 
+
+    function compareLikes(movie1, movie2) {
+        return movie2.likes - movie1.likes;
+    }
+
+    function compareTitles(movie1, movie2) {
+        return movie1.title.localeCompare(movie2.title);
+    }
+
+    // SORTING FUNCTIONS
+
+    function sortObjByLikes() {
+        return obj.sort(compareLikes);
+    }
+
+    function sortObjByAlphabet() {
+        return obj.sort(compareTitles);
+    }
+
+    var sortingL = $(".sort");
+    $(sortingL).click(function() {
+        sortObjByLikes();
+        setContent();
+    });
+
+    var sortingA = $(".alphabet");
+    $(sortingA).click(function() {
+        sortObjByAlphabet();
+        setContent();
+    });
 
 });
