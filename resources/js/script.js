@@ -3,13 +3,15 @@ $(document).ready(function() {
     //JSON GENERATOR
     setContent();
 
+    // INCREMENT LIKES FUNCTION
+
     function incrementLikes(i) {
         obj[i].likes++;
         var plusLikes = $(".plusLikes");
         $(plusLikes[i]).html(obj[i].likes);
     }
 
-    // COMPARE FUNCTION 
+    // COMPARE FUNCTIONS 
 
     function compareLikes(movie1, movie2) {
         return movie2.likes - movie1.likes;
@@ -19,7 +21,7 @@ $(document).ready(function() {
         return movie1.title.localeCompare(movie2.title);
     }
 
-    // SORT FUNCTION
+    // SORT FUNCTIONS
 
     function sortObjByLikes() {
         return obj.sort(compareLikes);
@@ -44,7 +46,7 @@ $(document).ready(function() {
     // SET CONTENT FUNCTION 
 
     function setContent() {
-       
+
         for (let i = 0; i < obj.length; i++) {
             var myImage = $('<img src=' + obj[i].img + '>');
             var imgDiv = $(".image");
@@ -52,23 +54,24 @@ $(document).ready(function() {
             var myText = $('<p>' + obj[i].title + '</p>' + '<p>' + obj[i].description + '</p>');
             var textDiv = $(".text");
             $(textDiv[i]).html(myText);
-            var myLikes = $('<span class="text-light button">Like <i class="fa fa-thumbs-o-up"></i></span>' +
-                '<span class="plusLikes">' + obj[i].likes + '</span>');
+            var myLikes = $('<span class="text-success button">Like <i class="fa fa-thumbs-o-up"></i></span>' +
+                '<span class="plusLikes bg-success text-light">' + obj[i].likes + '</span>');
             var likesDiv = $(".likes");
             $(likesDiv[i]).html(myLikes);
         }
 
-         var btn = $(".button");
+        var btn = $(".button");
 
         for (let i = 0; i < btn.length; i++) {
             $(btn[i]).click(function() {
                 incrementLikes(i);
             });
         }
-        $("p, span").addClass("text-light");
+        $("p").addClass("text-light");
+        $(".plusLikes").addClass("ml-3").addClass("rounded-circle").addClass("p-3");
         $("img").addClass("img-fluid");
     }
 
-    // STYILING
+    // ADDITIONAL STYILING
 
 });

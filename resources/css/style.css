@@ -1,4 +1,11 @@
 /* BOOTSTRAP OVERRIDES */
+.deepblue {
+	background-color: #171D24;
+}
+
+.black {
+	background-color: #000000;
+} 
 
 .button,
 .sort,
@@ -11,10 +18,11 @@
 .sortdown {
     position: relative;
     display: inline-block;
+    float: right;
 }
 
 .sortbtn {
-    background-color: #4CAF50;
+    background-color: #171D24;
     color: white;
     padding: 12px 16px;
     font-size: 16px;
@@ -28,6 +36,7 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    right: 0;
 }
 
 .sortdown-menu a {
@@ -41,4 +50,4 @@
 
 .sortdown:hover .sortdown-menu {display: block;}
 
-.sortdown:hover .sortbtn {background-color: #3e8e41;}
+.sortdown:hover .sortbtn {background-color: #000000;}
