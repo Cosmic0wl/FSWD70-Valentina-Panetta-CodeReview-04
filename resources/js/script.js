@@ -55,7 +55,7 @@ $(document).ready(function() {
             var textDiv = $(".text");
             $(textDiv[i]).html(myText);
             var myLikes = $('<span class="text-success button">Like <i class="fa fa-thumbs-o-up"></i></span>' +
-                '<span class="plusLikes bg-success text-light">' + obj[i].likes + '</span>');
+                '<div class="round"><span class="plusLikes text-light">' + obj[i].likes + '</span></div>');
             var likesDiv = $(".likes");
             $(likesDiv[i]).html(myLikes);
         }
@@ -68,7 +68,12 @@ $(document).ready(function() {
             });
         }
         $("p").addClass("text-light");
-        $(".plusLikes").addClass("ml-3").addClass("rounded-circle").addClass("p-3");
+        $(".round").css({"display":"flex",
+            "align-items":"center",
+            "justify-content":"center",
+            "width":"40px",
+            "height":"40px"});        
+        $(".round").addClass("ml-3").addClass("rounded-circle").addClass("bg-success");
         $("img").addClass("img-fluid");
     }
 
