@@ -1,6 +1,8 @@
 $(document).ready(function() {
     var obj = movies;
+
     //JSON GENERATOR
+
     setContent();
 
     // SET CONTENT FUNCTION 
